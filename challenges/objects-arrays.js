@@ -130,7 +130,6 @@ zooAnimals.forEach(function(obj){
   animalNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}.`)
   return animalNames;
 })
-
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -140,6 +139,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map(function(obj) {
+  lowerCase.push(obj.animal_name.toLowerCase());
+})
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
